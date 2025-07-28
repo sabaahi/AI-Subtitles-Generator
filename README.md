@@ -19,14 +19,7 @@ This project provides a tool for automatically generating subtitles for videos, 
 
 ### Installation
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/ekomlenovic/AI-W-Subtitles.git
-   cd AI-W-Subtitles
-   ```
-
-2. Install the required packages with pip or conda:
+Install the required packages with pip or conda:
 
    ```bash
     pip install -r requirements.txt
@@ -49,7 +42,6 @@ python main.py --translate <fr/en> ./path/to/video.<mp4/mkv/avi>
 
 - `--model_name`: (Optional) The Whisper model to use. Default is turbo. Available options: `tiny`, `base`, `small`, `medium`, `large`, `turbo`.
 [Choose the model.](https://github.com/openai/whisper?tab=readme-ov-file#available-models-and-languages)
-- `--translate`: (Optional) The language to translate the subtitles to. Options: `fr`, `en` (French, English).
 
 ### Output
 The generated subtitle files will be saved in a folder named `subtitles`, containing:
