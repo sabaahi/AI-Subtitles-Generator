@@ -1,0 +1,42 @@
+Video Subtitle Generator
+
+This project provides a tool for automatically generating subtitles for videos, supporting both transcription and translation into multiple languages using Whisper and Helsinki-NLP MarianMT models.
+
+Features:
+
+1. Extracts audio from video files.
+2. Detects the language of the audio and transcribes it into subtitles.
+3. Optionally translates the subtitles to another language (English <-> French).
+4. Generates SRT subtitle files.
+
+Requirements:
+
+1. Python 3.11+
+2. whisper (OpenAI's Whisper model)
+3. torch (PyTorch)
+4. moviepy (For video and audio processing)
+5. transformers (For translation models)
+
+Installation:
+
+
+Install the required packages with pip:
+ pip install -r requirements.txt
+
+Usage:
+
+The script can be run from the command line using the following syntax:
+
+python main.py --translate <en> ./path/to/video.<mp4/mkv/avi>
+
+Arguments:
+
+--model_name: (Optional) The Whisper model to use. Default is turbo. Available options: tiny, base, small, medium, large, turbo. Choose the model.
+
+
+Output:
+
+The generated subtitle files will be saved in a folder named subtitles, containing:
+
+Original subtitles in the detected language (e.g., video_fr.srt).
+Translated subtitles in the specified language (e.g., video_en.srt), if translation is requested.
